@@ -47,34 +47,6 @@ header nav ul li a {
   font-size: 1.55vw;
 }
 
-/* Footer  */
-footer {
-  background-color: #fce138;
-  width: 100%;
-  padding: 40px 35px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-footer h2 {
-  color: #024e76;
-  font-size: 30px;
-  margin: 0;
-}
-
-footer div {
-  line-height: 1.5;
-  text-align: right;
-}
-
-footer a {
-  color: #024e76;
-}
-
-section {
-  padding: 60px;
-}
 /* Hero Style Starts*/
 .hero {
   background-image: url(../images/hero-bg.jpg);
@@ -140,17 +112,15 @@ section {
 
 /* What we do section /introduction*/
 
-.intro {
-  text-align: center;
-}
 
 .section-title {
   font-size: 55px;
   color: #024e76;
-  margin-bottom: 35px;
-  padding: 0 100px 20px 100px;
   border-bottom: 3px solid #fce138;
-  display: inline-block;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%;
 }
 
 .primary-border {
@@ -166,9 +136,9 @@ section {
   width: 80%;
   font-size: 20px;
   margin: auto;
+  text-align: center;
 }
 .steps {
-  text-align: center;
   background-color: #fce138;
 }
 
@@ -192,9 +162,7 @@ section {
   font-size: 23px;
 }
 /* Trainer section */
-.trainers {
-  text-align: center;
-}
+
 .trainer {
   width: 900px;
   margin: 0 auto 30px auto;
@@ -221,6 +189,10 @@ section {
   text-align: right;
 }
 
+.flex-row{
+    display: flex;
+}
+
 .trainer-bio h3 {
   font-size: 32px;
   margin-bottom: 8px;
@@ -239,7 +211,6 @@ section {
 
 /* Reach Out Style Start */
 .contact {
-  text-align: center;
   background: #024e76;
 }
 
@@ -275,3 +246,31 @@ section {
   color: #fce138;
 }
 /* REACH OUT STYLES END */
+/* Footer  */
+footer {
+    background-color: #fce138;
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  footer h2 {
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  footer div {
+    line-height: 1.5;
+    text-align: right;
+  }
+  
+  footer a {
+    color: #024e76;
+  }
+  
+  section {
+    padding: 60px;
+  }
