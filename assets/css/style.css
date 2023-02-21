@@ -18,12 +18,20 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 header h1 {
   font-weight: bold;
   font-size: 36px;
   color: #fce138;
   margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 header a {
   text-decoration: none;
@@ -45,17 +53,42 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* change the style of a link when a user hover over the link */
+header nav ul li a:hover {
+  background-color: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
+}
+
+/* change the style of a button when a user hover over button .*/
+.hero-form button:hover {
+  background-color: #39a6b2;
+}
+
+/* Change the style of contact form button when a user hover over it */
+.contact-form button:hover {
+  color: #fce138;
+  background-color: #39a6b2;
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 /* Hero Style Starts*/
 .hero {
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  background-attachment: fixed;
 }
 .hero-cta {
   width: 35%;
@@ -70,16 +103,19 @@ header nav ul li a {
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero-form {
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgba(252, 225, 56, 0.8);
   padding: 20px;
   width: 40%;
   color: #024e76;
   margin: 3.5%;
   bottom: 0px;
   right: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .hero-form h3 {
@@ -97,6 +133,8 @@ header nav ul li a {
   margin-bottom: 15px;
   color: #024e76;
   font-size: 16px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .hero-form label {
@@ -108,6 +146,7 @@ header nav ul li a {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
 }
 /* Hero Style End */
 
@@ -146,7 +185,6 @@ header nav ul li a {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -184,6 +222,10 @@ header nav ul li a {
   line-height: 1.5;
   color: #024e76;
 }
+/* add line to each step except the last step using pseudo class */
+.step:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
+}
 /* Trainer section */
 .trainers {
   width: 100%;
@@ -210,7 +252,6 @@ header nav ul li a {
 .text-left {
   text-align: left;
 }
-
 
 .flex-row {
   display: flex;
@@ -260,6 +301,13 @@ header nav ul li a {
   border: 1px solid #024e76;
   margin-top: 5px;
   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(57, 166, 178, 0.9);
 }
 
 .contact-form button {
@@ -269,6 +317,7 @@ header nav ul li a {
   font-size: 16px;
   padding: 15px 0;
   width: 100%;
+  border-radius: 10px;
 }
 .contact-info div {
   color: white;
@@ -320,19 +369,19 @@ section {
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
- 
- @media screen and (max-width:980px){
 
+@media screen and (max-width: 980px) {
   header {
     justify-content: center;
     padding: 0;
+    position: relative;
   }
 
-  header h1{
-   text-align: center;
-    width: 100%; 
+  header h1 {
+    text-align: center;
+    width: 100%;
   }
-  
+
   header nav ul {
     justify-content: center;
     width: 100%;
@@ -341,84 +390,85 @@ section {
   header nav ul li a {
     font-size: 20px;
   }
- 
-  footer{
+
+  footer {
     justify-content: center;
     text-align: center;
     width: 100%;
   }
-  footer h2,footer div{
+  footer h2,
+  footer div {
     width: 100%;
-    text-align: center;
-  }
-  
-  .hero-cta,.contact-form{
-    width: 100%;
-  }
-  .hero-cta{
     text-align: center;
   }
 
-  .section-title{
+  .hero-cta,
+  .contact-form {
+    width: 100%;
+  }
+  .hero-cta {
+    text-align: center;
+  }
+
+  .section-title {
     width: 80%;
   }
-  .trainer{
+  .trainer {
     flex: 0 70%;
   }
 
-  .contact-info iframe{
-    flex:1 100%;
+  .contact-info iframe {
+    flex: 1 100%;
   }
- }
+}
 
 /* MEDIA QUERY FOR I PAD  */
-@media screen and (max-width:786px) {
-
-  section{
+@media screen and (max-width: 786px) {
+  section {
     padding: 30px 15px;
   }
- .step h3{
-  flex:1 100%;
-  text-align: center;
- }
- .step-info{
- flex:2 100%;
- justify-content: center;
- align-content: center;
- }
- .step-img{
-  flex:0 38%;
-  margin-right:0;
-  margin-top:15px;
-  margin-bottom:15px;
- }
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+  .step-info {
+    flex: 2 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  .step-img {
+    flex: 0 38%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 
- .step-text{
-  flex: 100%;
-  text-align: center;
- }
+  .step-text {
+    flex: 100%;
+    text-align: center;
+  }
 }
 
 /* MEDIA QUERY FOR MOBILE */
-@media screen and (max-width:575px){
+@media screen and (max-width: 575px) {
   .hero-form button {
     width: 100%;
   }
-  .section-title{
-    width:95%
+  .section-title {
+    width: 95%;
   }
-  
-.intro p{
-  width: 100px;
-}
 
-.trainer{
-  flex: 0 100%;
-}
-.contact-info >*{
-  flex:0 100%
-}
-.contact-form{
-  order:3;
-}
+  .intro p {
+    width: 100px;
+  }
+
+  .trainer {
+    flex: 0 100%;
+  }
+  .contact-info > * {
+    flex: 0 100%;
+  }
+  .contact-form {
+    order: 3;
+  }
 }
