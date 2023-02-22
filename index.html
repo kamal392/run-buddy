@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Run Buddy</title>
     <!--Import an external stylesheet-->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -83,16 +84,22 @@
           />
           <p>
             Have you worked out with a trainer before?
-            <input type="radio" name="trainer-confirm" id="trainer-yes" />
-            <label for="trainer-yes">Yes</label>
-            <input type="radio" name="trainer-confirm" id="trainer-no" />
-            <label for="trainer-no">No</label>
+            <span class="radio-wrapper">
+              <input type="radio" name="trainer-confirm" id="trainer-yes" />
+              <label for="trainer-yes">Yes</label>
+            </span>
+            <span class="radio-wrapper">
+              <input type="radio" name="trainer-confirm" id="trainer-no" />
+              <label for="trainer-no">No</label>
+            </span>
           </p>
           <p>
-            <label for="checkbox"
-              >I acknowledge that I am at least 18 years of age</label
-            >
-            <input type="checkbox" name="age-confirm" id="age-confirm" />
+            <span class="checkbox-wrapper">
+              <input type="checkbox" name="age-confirm" id="checkbox" />
+              <label for="checkbox"
+                >I acknowledge that I am at least 18 years of age</label
+              >
+            </span>
           </p>
           <button type="submit">Get running</button>
         </form>
@@ -102,134 +109,158 @@
 
     <!--"What we do section"-->
     <section id="What-we-do" class="intro">
-      <h2 class="section-title primary-border">What We Do</h2>
-      <p>
-        butcher selfies chambray shabby chic gentrify readymade yr Echo Park
-        XOXO Tumblr normcore Banksy direct trade Blue Bottle chillwave you
-        probably haven't heard of them single-origin coffee vice fanny pack
-        fixie odd Future Austin fingerstache pickled twee synth Wes Anderso
-        Thindercats viral bitter flannel meggings narwhal Marfa schlitz
-        sustainable Intelligentsia umami deep v craft
-      </p>
+      <!-- Wrap every h2 with a class of "section-title" in this div! -->
+      <div class="flex-row">
+        <h2 class="section-title primary-border">What We Do</h2>
+      </div>
+      <div class="flex-row">
+        <p>
+          butcher selfies chambray shabby chic gentrify readymade yr Echo Park
+          XOXO Tumblr normcore Banksy direct trade Blue Bottle chillwave you
+          probably haven't heard of them single-origin coffee vice fanny pack
+          fixie odd Future Austin fingerstache pickled twee synth Wes Anderso
+          Thindercats viral bitter flannel meggings narwhal Marfa schlitz
+          sustainable Intelligentsia umami deep v craft
+        </p>
+      </div>
     </section>
 
     <!--"What you do section"-->
     <section id="What-you-do" class="steps">
-      <h2 class="section-title secondary-border">What You Do</h2>
+      <div class="flex-row">
+        <h2 class="section-title secondary-border">What You Do</h2>
+      </div>
 
-      <div>
+      <div class="step">
         <!-- insert this img element -->
-        <img src="./assets/images/01-04-svgs/step-1.svg" alt="" />
-        <h3>Step 1: Fill out the Form Above</h3>
-        <p>You're already here, so why not?</p>
+        <h3>Step 1.</h3>
+        <div class="step-info">
+          <div class="step-img">
+            <img src="./assets/images/01-04-svgs/step-1.svg" alt="" />
+          </div>
+          <div class="step-text">
+            <h4>Fill Out The Form Above</h4>
+            <p>You're already here, so why not?</p>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <img src="./assets/images/01-04-svgs/step-2.svg" alt="" />
-        <h3>Step 2: Consult with One of Our Trainers</h3>
-        <p>Are you here to build muscle, lose weight , or just feel good?</p>
+      <div class="step">
+        <h3>Step 2.</h3>
+        <div class="step-info">
+          <div class="step-img">
+            <img src="./assets/images/01-04-svgs/step-2.svg" alt="" />
+          </div>
+
+          <div class="step-text">
+            <h4>Consult with one of our trainer</h4>
+            <p>
+              Are you here to build muscle, lose weight , or just feel good?
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <img src="./assets/images/01-04-svgs/step-3.svg" alt="" />
-        <h3>Step 3: Get Running.</h3>
-        <p>
-          Hit the ground running (literally) once your trainer lays out your
-          pain.
-        </p>
+      <div class="step">
+        <h3>Step 3.</h3>
+        <div class="step-info">
+          <div class="step-img">
+            <img src="./assets/images/01-04-svgs/step-3.svg" alt="" />
+          </div>
+          <div class="step-text">
+            <h4>Get Running</h4>
+            <p>
+              Hit the ground running (literally) once your trainer lays out your
+              pain.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <img src="./assets/images/01-04-svgs/step-4.svg" alt="" />
-        <h3>Step 4: See Results</h3>
-        <p>Bi-Weekly checkins with your trainer will keep you focused</p>
+      <div class="step">
+        <h3>Step 4.</h3>
+        <div class="step-info">
+          <div class="step-img">
+            <img src="./assets/images/01-04-svgs/step-4.svg" alt="" />
+          </div>
+          <div class="step-text">
+            <h4>See Results</h4>
+            <p>Bi-Weekly checkins with your trainer will keep you focused</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!--"meet the trainers " section-->
-    <section class="trainers" id="Your-trainers">
-      <h2 class="section-title primary-border">Meet The Trainers</h2>
+    <!--"meet the trainers "-->
+    <section id="Your-trainers">
+      <div class="flex-row">
+        <h2 class="section-title primary-border">Meet The Trainers</h2>
+      </div>
 
       <!-- first trainer bio -->
-      <article class="trainer">
-        <img
-          src="./assets/images/01-05-trainers/trainer-1.jpg"
-          alt="Arron Stephens in his workout clothes,ready to pump iron"
-        />
-        <div class="trainer-bio text-left">
-          <h3>Arron Stephens</h3>
-          <h4>Speed / Strength</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis
-            corrupti laboriosam fugit repellendus, non praesentium ad fuga
-            expedita inventore dolores iste aut eaque. Recusandae aut adipisci
-            enim quod nam!
-          </p>
-        </div>
-      </article>
+      <div class="trainers">
+        <article class="trainer">
+          <img
+            src="./assets/images/01-05-trainers/trainer-1.jpg"
+            alt="Arron Stephens in his workout clothes,ready to pump iron"
+          />
+          <div class="trainer-bio text-left">
+            <h3>Arron Stephens</h3>
+            <h4>Speed / Strength</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              omnis corrupti laboriosam fugit repellendus, non praesentium ad
+              fuga expedita inventore dolores iste aut eaque. Recusandae aut
+              adipisci enim quod nam!
+            </p>
+          </div>
+        </article>
 
-      <!-- Second Trainer bio -->
-      <article class="trainer">
-        <div class="trainer-bio text-right">
-          <h3>Joanna Gill</h3>
-          <h4>Endurance</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            corrupti quo, deserunt eaque quia rerum quidem, odio a, ad quis
-            expedita dignissimos! Eaque, impedit dolorum sequi ea praesentium
-            magni ratione!
-          </p>
-        </div>
-        <img
-          src="./assets/images/01-05-trainers/trainer-2.jpg"
-          alt="Jonna Gill cooling off after a workout"
-        />
-      </article>
+        <!-- Second Trainer bio -->
+        <article class="trainer">
+          <img
+            src="./assets/images/01-05-trainers/trainer-2.jpg"
+            alt="Jonna Gill cooling off after a workout"
+          />
+          <div class="trainer-bio">
+            <h3>Joanna Gill</h3>
+            <h4>Endurance</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              corrupti quo, deserunt eaque quia rerum quidem, odio a, ad quis
+              expedita dignissimos! Eaque, impedit dolorum sequi ea praesentium
+              magni ratione!
+            </p>
+          </div>
+        </article>
 
-      <!-- Third Trainer Bio -->
-      <article class="trainer">
-        <img
-          src="./assets/images/01-05-trainers/trainer-3.jpg"
-          alt="Harry Smith showing his mussels"
-        />
-        <div class="trainer-bio text-left">
-          <h3>Harry "The Headband" Smith</h3>
-          <h4>Strength</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum
-            harum libero saepe, omnis optio. Assumenda illo quaerat totam
-            sapiente unde animi inventore enim quis, magnam vel eos error
-            officia.
-          </p>
-        </div>
-      </article>
+        <!-- Third Trainer Bio -->
+        <article class="trainer">
+          <img
+            src="./assets/images/01-05-trainers/trainer-3.jpg"
+            alt="Harry Smith showing his mussels"
+          />
+          <div class="trainer-bio text-left">
+            <h3>Harry "The Headband" Smith</h3>
+            <h4>Strength</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum
+              harum libero saepe, omnis optio. Assumenda illo quaerat totam
+              sapiente unde animi inventore enim quis, magnam vel eos error
+              officia.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!--"reach out section"-->
     <section class="contact" id="reach-out">
-      <h2 class="section-title secondary-border">Reach Out</h2>
-      <div class="contact-info">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.652008814411!2d77.06574631409556!3d28.610214691843627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d2a09956a9%3A0xb0ea96baed8ad30a!2sChatkaara%20Point!5e0!3m2!1sen!2sin!4v1675165845330!5m2!1sen!2sin"
-          width="400"
-          height="400"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        >
-        </iframe>
-        <!-- contact form -->
-        <div class="contact-form">
-          <h3>Contact us</h3>
-          <form>
-            <label for="contact-name">Your Name</label>
-            <input type="text" id="contact-name" placeholder="Your Name" />
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" placeholder="Message"></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+      <div class="flex-row">
+        <h2 class="section-title secondary-border">Reach Out</h2>
+      </div>
 
+      <div class="contact-info">
         <div>
           <h3>Run Buddy</h3>
           <p>
@@ -244,6 +275,28 @@
             E: <a href="mailto:info@runbuddy.io">info@runbuddy.io</a>
           </address>
         </div>
+        <!-- contact form -->
+        <div class="contact-form">
+          <h3>Contact us</h3>
+          <form>
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" placeholder="Your Name" />
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <!-- google map -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.652008814411!2d77.06574631409556!3d28.610214691843627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d2a09956a9%3A0xb0ea96baed8ad30a!2sChatkaara%20Point!5e0!3m2!1sen!2sin!4v1675165845330!5m2!1sen!2sin"
+          width="400"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
       </div>
     </section>
 
