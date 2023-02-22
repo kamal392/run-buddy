@@ -8,7 +8,7 @@ A website that offers fitness training services.
 * CSS
 
 ## Website
-https://github.com/kamal392/run-buddy.git
+https://kamal392.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by [kamal kishore]
